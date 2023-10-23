@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <script language="JavaScript">
+       
+       var n1, n2, operador;
+        
+        function botao(bt) 
+        {     
+            document.frm.txtSaida.value += bt; 
+        }
+  
+        function operacao(op)
+        {
+            n1 = parseFloat(frm.txtSaida.value);
+            operador = op;
+            frm.txtSaida.value="";
+        }
+          
+        function calcular()
+        {
+            n2 = parseFloat(frm.txtSaida.value);
+            switch (operador)
+            {
+                case 1: {
+                    frm.txtSaida.value = n1 + n2;
+                    break;
+                }
+                case 2: {
+                    frm.txtSaida.value = n1 - n2;
+                    break;
+                }
+                case 3: {
+                    frm.txtSaida.value = n1 * n2;
+                    break;
+                }
+                case 4: {
+                    frm.txtSaida.value = n1 / n2;
+                    break;
+                }
+            }
+        }
+  
+  
+  </script>
+
+    <style type="text/css">
+        input[type=button]
+        {
+            border-radius: 15px;  
+            width: 30px;
+            height: 30px;
+        }
+      
+        
+    </style>
+
+   
+
+
+</head>
+<body>
+    <center>
+        <form name="frm">
+            <input type="text" name="txtSaida" readonly><br>
+            <input type="button" name="bt1" value="1" onclick="botao('1');">
+            <input type="button" name="bt2" value="2" onClick="botao('2');">
+            <input type="button" name="bt3" value="3" onClick="botao('3');"> 
+            <input type="button" name="btSom" value="+" onClick="operacao(1);"> <br>
+            <input type="button" name="bt4" value="4" onClick="botao('4');">
+            <input type="button" name="bt5" value="5" onClick="botao('5');">
+            <input type="button" name="bt6" value="6" onClick="botao('6');"> 
+            <input type="button" name="btSub" value="-" onClick="operacao(2);"> <br>
+            <input type="button" name="bt7" value="7" onclick="botao('7');">
+            <input type="button" name="bt8" value="8" onClick="botao('8');">
+            <input type="button" name="bt9" value="9" onClick="botao('9');"> 
+            <input type="button" name="btMul" value="*" onClick="operacao(3);"> <br>
+            <input type="button" name="bt0" value="0" onclick="botao('0');">
+            <input type="button" name="btPto" value="." onClick="botao('.');">
+            <input type="button" name="btCalcula" value="=" onClick="calcular();">
+            <input type="button" name="btDiv" value="/" onClick="operacao(4);"> <br>
+.
+            
+
+
+
+        </form>
+    </center>
+</body>
+</html>
